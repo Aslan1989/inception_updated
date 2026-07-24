@@ -3,7 +3,7 @@ NAME = inception
 COMPOSE = docker compose -f srcs/docker-compose.yml
 
 all:
-	$(COMPOSE) up --build
+	$(COMPOSE) up --build -d
 
 down:
 	$(COMPOSE) down
