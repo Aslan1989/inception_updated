@@ -34,6 +34,19 @@ if [ ! -f wp-config.php ]; then
         --admin_password=${WP_ADMIN_PASSWORD} \
         --admin_email=${WP_ADMIN_EMAIL}
 
+	# Install and activate Redis plugin
+	wp plugin install redis-cache \
+		--activate \
+		--allow-root
+	
+	# Configure Redis settings in wp-config.php
+	wp config set WP_REDIS_HOST redis \
+		--type=constant \
+		--allow-root
+
+	# Enable Redis object caching
+	wp redis enable --allow-root
+
     wp user create \
         --allow-root \
         ${WP_USER} ${WP_USER_EMAIL} \

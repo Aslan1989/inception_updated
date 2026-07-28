@@ -4,6 +4,7 @@ RUN apt update && apt install -y \
 php \
 php-fpm \
 php-mysql \
+php-redis \
 mariadb-client \
 curl
 
