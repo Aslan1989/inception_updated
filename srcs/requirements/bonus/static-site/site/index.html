@@ -1,64 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio - Aslan</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aslan Isaev — Software Engineer</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <h1>Aslan Isaev</h1>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <section id="about" class="hero">
-        <div class="container">
-            <h2>Welcome</h2>
-            <p>I am a student learning Docker, DevOps, and system administration.</p>
-        </div>
-    </section>
+<div class="progress-bar" id="progressBar"></div>
 
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skill-grid">
-                <div class="skill-card">
-                    <h3>Docker</h3>
-                    <p>Building multi-container infrastructures</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Linux</h3>
-                    <p>System administration and shell scripting</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Databases</h3>
-                    <p>MariaDB, MySQL</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Web servers</h3>
-                    <p>Nginx configuration</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<nav class="navbar" id="navbar">
+  <div class="wrap nav-inner">
+    <a href="#top" class="nav-logo">aslan<span class="nav-cursor">_</span></a>
+    <ul class="nav-links">
+      <li><a href="#about" data-section="about">about</a></li>
+      <li><a href="#projects" data-section="projects">projects</a></li>
+      <li><a href="#experience" data-section="experience">experience</a></li>
+      <li><a href="#contact" data-section="contact">contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Get in touch</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">☰</button>
+  </div>
+</nav>
 
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2>This Static Website</h2>
-            <p>Built with plain HTML and CSS, no PHP or backend.</p>
-            <p>Runs inside its own Docker container with nginx.</p>
-        </div>
-    </section>
+<!-- ================= HERO ================= -->
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="prompt"><span class="prompt-sym">$</span> <span id="typedText"></span><span class="cursor">▌</span></p>
+      <h1>I build reliable systems —<br>from Linux servers to<br><span class="accent-text">containerised web apps.</span></h1>
+      <p class="hero-sub">
+        Aslan Isaev — software engineering student at 42 School, based in Heilbronn, Germany.
+        Coming from over a decade in operations, now focused on infrastructure, backend and DevOps.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View my work</a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <div class="photo-frame">
+        <img src="img/aslan.jpg" alt="Portrait of Aslan Isaev">
+      </div>
+    </div>
+  </div>
+  <a href="#stats" class="scroll-cue" aria-label="Scroll down">↓</a>
+</header>
 
-    <footer>
-        <p>&copy; 2026 Aslan Aisaev — Inception project</p>
-    </footer>
+<!-- ================= STATS ================= -->
+<section class="stats-strip" id="stats">
+  <div class="wrap stats-grid">
+    <div class="stat">
+      <span class="stat-num">12+</span>
+      <span class="stat-label">years of client-facing<br>operations experience</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">3</span>
+      <span class="stat-label">infrastructure &amp; systems<br>projects shipped at 42</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">3</span>
+      <span class="stat-label">languages spoken<br>RU · EN · DE</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">100%</span>
+      <span class="stat-label">custom Docker images —<br>nothing pulled pre-built</span>
+    </div>
+  </div>
+</section>
+
+<main>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="section reveal" id="about">
+    <div class="wrap about-layout">
+      <div class="about-copy">
+        <p class="eyebrow">// about</p>
+        <h2>From restaurant floors to server rooms.</h2>
+        <p>
+          I didn't start out in tech. For over a decade I worked in hospitality and logistics —
+          managing restaurant operations in Moscow and Makhachkala, then coordinating deliveries in
+          Germany. Those jobs taught me something engineering courses don't: how to stay calm when
+          something breaks live, read a system end-to-end, and fix what's actually wrong instead of
+          what looks wrong.
+        </p>
+        <p>
+          I kept circling back to computers — an HTML/CSS course in 2020, a Java web development
+          program in 2022 — until in 2025 I made the full switch: <strong>42 School</strong>,
+          project-based, peer-reviewed, no shortcuts.
+        </p>
+        <p>
+          This website is a small proof of that: built, containerised and deployed by hand,
+          as part of a larger Docker infrastructure project.
+        </p>
+      </div>
+      <div class="about-facts">
+        <div class="fact-card">
+          <span class="fact-label">Based in</span>
+          <span class="fact-value">Heilbronn, Germany</span>
+        </div>
+        <div class="fact-card">
+          <span class="fact-label">Currently</span>
+          <span class="fact-value">Software Engineering, 42 School</span>
+        </div>
+        <div class="fact-card">
+          <span class="fact-label">Focus</span>
+          <span class="fact-value">Systems, C/C++, Docker, Linux</span>
+        </div>
+        <div class="fact-card">
+          <span class="fact-label">Languages</span>
+          <span class="fact-value">Russian (native) · English (C1) · German (B2)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section class="section reveal" id="projects">
+    <div class="wrap">
+      <p class="eyebrow">// selected work</p>
+      <h2 class="section-title">Projects</h2>
+
+      <div class="project-showcase">
+        <article class="project-card featured">
+          <div class="project-card-top">
+            <span class="project-tag">Featured</span>
+            <span class="dates">2025 – 2026</span>
+          </div>
+          <h3>Inception</h3>
+          <p class="project-desc">
+            A small production-style infrastructure, from scratch: NGINX, WordPress + PHP-FPM
+            and MariaDB, each in its own container, wired together with Docker Compose and TLS,
+            plus bonus services like Redis, FTP and Adminer.
+          </p>
+          <div class="stack-pills">
+            <span>Docker</span><span>Docker Compose</span><span>NGINX</span><span>MariaDB</span><span>WordPress</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card-top">
+            <span class="project-tag">Systems</span>
+            <span class="dates">2025</span>
+          </div>
+          <h3>Born2BeRoot</h3>
+          <p class="project-desc">
+            A hardened Debian server built inside VirtualBox: encrypted LVM partitioning, SSH
+            locked down, strict password policy, and a Bash monitoring script running on a cron job.
+          </p>
+          <div class="stack-pills">
+            <span>Debian</span><span>LVM</span><span>SSH</span><span>UFW</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card-top">
+            <span class="project-tag">C / Systems</span>
+            <span class="dates">2025</span>
+          </div>
+          <h3>Philosophers</h3>
+          <p class="project-desc">
+            A classic concurrency problem solved with threads and mutexes — no race conditions,
+            no deadlocks. The kind of low-level discipline that carries over directly into
+            reliable infrastructure code.
+          </p>
+          <div class="stack-pills">
+            <span>C</span><span>Multithreading</span><span>Synchronisation</span>
+          </div>
+        </article>
+      </div>
+
+      <p class="further">Also shipped: Cub3D (C, raycasting engine) · Pizza Delivery Service (Java, Spring Boot, REST API)</p>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section class="section reveal">
+    <div class="wrap">
+      <p class="eyebrow">// toolbox</p>
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-cloud">
+        <span class="skill-chip">C</span>
+        <span class="skill-chip">C++</span>
+        <span class="skill-chip">Java / Spring Boot</span>
+        <span class="skill-chip learning">Go (learning)</span>
+        <span class="skill-chip">Docker</span>
+        <span class="skill-chip">Docker Compose</span>
+        <span class="skill-chip">Linux (Debian/Ubuntu)</span>
+        <span class="skill-chip">VirtualBox</span>
+        <span class="skill-chip">NGINX</span>
+        <span class="skill-chip">TLS/SSL</span>
+        <span class="skill-chip">TCP/IP</span>
+        <span class="skill-chip">SSH</span>
+        <span class="skill-chip">REST / JSON</span>
+        <span class="skill-chip">UFW</span>
+        <span class="skill-chip">Git / GitHub</span>
+        <span class="skill-chip">Bash scripting</span>
+        <span class="skill-chip">MySQL / MariaDB</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIENCE ================= -->
+  <section class="section reveal" id="experience">
+    <div class="wrap">
+      <p class="eyebrow">// path so far</p>
+      <h2 class="section-title">Experience &amp; background</h2>
+
+      <div class="exp-cards">
+        <div class="exp-card">
+          <span class="exp-dates">2025 — present</span>
+          <h3>Software Engineering</h3>
+          <p class="exp-place">42 School</p>
+          <p class="exp-desc">C, C++, Linux, algorithms, project-based peer learning.</p>
+        </div>
+        <div class="exp-card">
+          <span class="exp-dates">2022 — 2024</span>
+          <h3>Parcel Delivery Driver</h3>
+          <p class="exp-place">GLS, Jena</p>
+          <p class="exp-desc">100–140 parcels/day, on-time rate above 95%.</p>
+        </div>
+        <div class="exp-card">
+          <span class="exp-dates">2017 — 2021</span>
+          <h3>Manager</h3>
+          <p class="exp-place">Garden Restaurant, Makhachkala</p>
+          <p class="exp-desc">Ran daily operations; optimised POS system, -20% service time.</p>
+        </div>
+        <div class="exp-card">
+          <span class="exp-dates">2012 — 2017</span>
+          <h3>Manager</h3>
+          <p class="exp-place">Shokoladnitsa Café, Moscow</p>
+          <p class="exp-desc">Introduced digital ordering &amp; inventory tools, -15% waiting time.</p>
+        </div>
+        <div class="exp-card">
+          <span class="exp-dates">2007 — 2012</span>
+          <h3>Specialist Degree, Applied IT in Economics</h3>
+          <p class="exp-place">Dagestan State Agrarian University</p>
+          <p class="exp-desc">Foundation year that first pointed me toward IT.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= CONTACT / CTA ================= -->
+<section class="cta-section" id="contact">
+  <div class="wrap cta-inner">
+    <p class="eyebrow">// contact</p>
+    <h2>Let's talk.</h2>
+    <p class="cta-sub">Open to internships and junior roles in cloud, infrastructure or backend engineering.</p>
+    <div class="cta-links">
+      <button class="btn btn-primary" id="copyEmail" type="button">boscott.isaev@gmail.com <span class="copy-icon">⧉</span></button>
+      <a href="tel:+491575063719" class="btn btn-ghost">+49 1575 0623719</a>
+      <a href="https://github.com/Aslan1989" target="_blank" rel="noopener" class="btn btn-ghost">GitHub ↗</a>
+    </div>
+    <p class="cta-address">Am Wollhaus, 74072 Heilbronn, Germany</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="fine">Served from a static Docker container — part of the Inception project (42 School), 2026.</p>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+<div class="toast" id="toast">Email copied to clipboard</div>
+
+<script src="script.js"></script>
 </body>
 </html>
