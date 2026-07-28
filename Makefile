@@ -2,7 +2,7 @@ NAME = inception
 
 COMPOSE = docker compose -f srcs/docker-compose.yml
 
-DATA = /home/aslan/data
+DATA = /home/aisaev/data
 
 all:
 	mkdir -p $(DATA)/mariadb $(DATA)/wordpress
