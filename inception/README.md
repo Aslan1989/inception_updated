@@ -108,7 +108,7 @@ https://aisaev.42.fr/wp-admin
 Persistent data is stored inside:
 
 ```text
-/home/aisaev/data/
+/home/aslan/data/
 ```
 
 ---

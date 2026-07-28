@@ -41,13 +41,13 @@ volumes:
     driver: local
     driver_opts:
       type: none
-      device: /home/aisaev/data/mariadb
+      device: /home/aslan/data/mariadb
       o: bind
   wordpress_data:
     driver: local
     driver_opts:
       type: none
-      device: /home/aisaev/data/wordpress
+      device: /home/aslan/data/wordpress
       o: bind
 networks:
   inception:

@@ -2,14 +2,14 @@ NAME = inception
 
 COMPOSE = docker compose -f srcs/docker-compose.yml
 
-DATA = /home/aisaev/data
+DATA = /home/aslan/data
 
 all:
 	mkdir -p $(DATA)/mariadb $(DATA)/wordpress
 	$(COMPOSE) up --build -d
 
 down:
-	$(COMPOSE) down
+	$(COMPOSE) down -v
 
 clean:
 	docker system prune -af

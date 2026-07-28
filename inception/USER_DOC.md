@@ -28,6 +28,9 @@ make
 make down
 ```
 
+This also removes the persistent Docker volumes, so the WordPress site and database
+are wiped, not just paused.
+
 ---
 
 # Rebuilding the Project

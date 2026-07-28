@@ -24,8 +24,8 @@ Required software:
 Create persistence directories:
 
 ```bash
-mkdir -p /home/aisaev/data/mariadb
-mkdir -p /home/aisaev/data/wordpress
+mkdir -p /home/aslan/data/mariadb
+mkdir -p /home/aslan/data/wordpress
 ```
 
 ---
@@ -71,8 +71,11 @@ docker exec -it nginx nginx -t
 ## MariaDB Access
 
 ```bash
-docker exec -it mariadb mysql
+docker exec -it mariadb mysql -u root -p
 ```
+
+Root now requires a password (set during container startup). Use the value of
+`MYSQL_ROOT_PASSWORD` from `.env`.
 
 ## View Logs
 
