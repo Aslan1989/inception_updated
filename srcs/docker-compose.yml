@@ -67,7 +67,16 @@ services:
     depends_on:
       - wordpress
     networks:
-      - inception    
+      - inception
+
+  static-site:
+    build: ./requirements/bonus/static-site
+    container_name: static-site
+    restart: always
+    ports:
+      - "8081:8081"
+    networks:
+      - inception     
     
 volumes:
   mariadb_data:
